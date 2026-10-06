@@ -1,0 +1,13 @@
+# .skill 安装验证（解包副本上真跑）
+
+打包：c4-skill-evaluator.skill（47 个文件，54,590 字节，zip，SKILL.md 在根）
+解包到：C:/Users/Public/c4a_install_test（纯 ASCII 路径，模拟换台机器）
+
+$ python scripts/c4_evaluator.py selftest
+  -> 13/13 通过
+
+$ python scripts/golden_test.py
+  -> 完整性判定 97.5%；作者识别 8/8
+
+$ python scripts/c4_evaluator.py evaluate wechat-doc-mapper --out .
+  -> 识别 1 位作者，平均综合分 76.5（与原目录内运行结果一致）
